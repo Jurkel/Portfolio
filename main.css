@@ -1,0 +1,54 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #FF224A; 
+    z-index: -1;
+}
+
+body {
+  text-align: center;
+}
+
+.content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    text-align: left;
+    font-size: 6em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: .8em;
+}
+
+.pink {
+  color: #FF224A;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.bottom {
+  position: fixed;
+  bottom: .8em;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.left {
+  position: fixed;
+  left: 2.5em;
+  transform-origin: 0 0;
+  transform: rotate(90deg) translate(-50%);
+  top: 48%;
+}
