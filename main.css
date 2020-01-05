@@ -72,6 +72,13 @@ body {
   left: 50%;
   transform: translate(-50%);
 }
+.white-bg {
+  background-color: white;
+  height: 100vh;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
 .push {
   bottom: 11.7%;
   z-index: 5;
@@ -89,14 +96,17 @@ input[type=submit] {
   margin-left: auto;
   margin-top: 2em;
   width: 90px;
-  background-color: #FF224A;
-  color: white;
-  border-style: none;
+  color: #FF224A;
+  border: 2px solid #FF224A;
   padding: 12px;
   font-size: .9em;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #FF224A;
+  color: white;
 }
 input::placeholder {
   color: #FF224A;
@@ -120,6 +130,24 @@ a {
   text-decoration: none;
   color: black;
 }
+button {
+  border: 2px solid #FF224A;
+  padding: 10px 15px;
+  width: 95px;
+  margin: 25px;
+  color: #FF224A;
+  font-size: 1em;
+}
+button:hover {
+  background-color: #FF224A;
+  color: white;
+}
+h2 {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.8em;
+  color: #FF224A;
+}
 h3 {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -138,6 +166,20 @@ h5 {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
   font-size: 1.2em;
   font-weight: 400;
+}
+.project-title {
+  padding-top: 1.3em;
+}
+.about-p {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  width: 80%;
+}
+.project-p {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  width: 75%;
+  margin: 3% auto 3% auto;
 }
 .top {
   margin: .8em;
@@ -176,7 +218,7 @@ h5 {
   font-size: 1em;
   position: absolute;
   top: 33%;
-  left: 65%;
+  left: 66%;
   transform: translate(-50%, -50%);
 }
 .media-icons {
