@@ -12,26 +12,53 @@
     </head>
     <body>
       <main>
-        <div id="main-page">
-          <div class="main-background"></div>
-          <div class="content-container">
-            <h1 class="content">
-              HAR<br>
-              VEY<br>
-              LE<span class="pink">.</span>
-            </h1>
-          </div>
-          <h3 class="corner">web developer +<br>
-          design enthusiast</h3>
-          <h4 class="top"><a href="contact.html">contact</a></h4>
-          <h4 class="left"><a href="about.html">about</a></h4>
-          <h4 class="bottom"><a href="projects.html">projects</a></h4>
-          <div class="media-icons">
-            <a href="https://github.com/Jurkel" target="_blank"><img src="resource-images/github.png" alt="github icon"></a>
-            <a href="https://www.linkedin.com/in/harvey-le-04360a116/" target="_blank"><img src="resource-images/linkedin.png" alt="linkedin icon"></a>
+        <div id="barba-wrapper">
+          <div id="main-page" class="barba-container">
+            <div class="main-background"></div>
+            <div class="content-container">
+              <h1 class="content">
+                HAR<br>
+                VEY<br>
+                LE<span class="pink">.</span>
+              </h1>
+            </div>
+            <h3 class="corner">web developer +<br>
+            design enthusiast</h3>
+            <h4 class="top"><a href="contact.html">contact</a></h4>
+            <h4 class="left"><a href="about.html">about</a></h4>
+            <h4 class="bottom"><a href="projects.html">projects</a></h4>
+            <div class="media-icons">
+              <a href="https://github.com/Jurkel" target="_blank"><img src="resource-images/github.png" alt="github icon"></a>
+              <a href="https://www.linkedin.com/in/harvey-le-04360a116/" target="_blank"><img src="resource-images/linkedin.png" alt="linkedin icon"></a>
+            </div>
           </div>
         </div>
       </main>
         <script src="index.js" async defer></script>
+        <script>
+          function loadpage() {
+            $('document').ready(function(){
+            var transEffect = Barba.BaseTransition.extend({
+                start: function(){
+                  this.newContainerLoading.then(val => this.fadeInNewcontent($(this.newContainer)));
+                },
+                fadeInNewcontent: function(nc) {
+                  nc.hide();
+                  var _this = this;
+                  $(this.oldContainer).fadeOut(1000).promise().done(() => {
+                    nc.css('visibility','visible');
+                    nc.fadeIn(1000, function(){
+                      _this.done();
+                    })
+                  });
+                }
+            });
+            Barba.Pjax.getTransition = function() {
+              return transEffect;
+            }
+            Barba.Pjax.start();
+          });
+          }
+        </script>
     </body>
 </html>
