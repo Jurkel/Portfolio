@@ -74,7 +74,11 @@ body {
 }
 .white-bg {
   background-color: white;
-  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  height: 90%;
   width: 80%;
   margin-right: auto;
   margin-left: auto;
@@ -166,6 +170,10 @@ h5 {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
   font-size: 1.2em;
   font-weight: 400;
+}
+.upside-down {
+  transform: rotate(180deg);
+  margin-top: -2em;
 }
 .project-title {
   padding-top: 1.3em;
