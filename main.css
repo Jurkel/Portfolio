@@ -17,8 +17,9 @@ body {
 }
 .contact-title {
   position: relative;
-  top: 2em;
+  top: 1em;
   font-size: 1.5em;
+  margin: 2em auto 2em auto;
 }
 .bg {
   background-color: #FF224A;
@@ -30,13 +31,13 @@ body {
   width: 85%;
   height: 75%;
   text-align: left;
-  padding-left: 4em;
+  padding-left: 2em;
   padding-top: 7%;
   padding-right: 17%;
 }
 .contact-container {
   position: fixed;
-  width: 55%;
+  width: 90%;
   background-color: white;
   height: 70%;
   top: 50%;
@@ -49,9 +50,17 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.email {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin: 1em auto 1em auto;
+}
+.quiz-image {
+  width: 75%;
+}
 .hero-text {
     text-align: left;
-    font-size: 8em;
+    font-size: 4em;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: bold;
     line-height: .8em;
@@ -97,7 +106,8 @@ input[type=text], input[type=email], textarea.form-control {
   padding: 12px 15px;
   margin-top: 15px;
   font-size: .9em;
-  width: 75%;
+  font-weight: 800;
+  width: 90%;
 }
 button.btn.btn-primary.btn-md {
   margin-right: auto;
@@ -109,6 +119,7 @@ button.btn.btn-primary.btn-md {
   border: 2px solid #FF224A;
   padding: 12px;
   font-size: .9em;
+  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
@@ -183,14 +194,28 @@ h5 {
 }
 .about-p {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  width: 80%;
+  font-size: .7em;
+  width: 85%;
 }
 .project-p {
+  text-align: left;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 10px;
   width: 75%;
   margin: 3% auto 3% auto;
+}
+.project-button {
+  margin: 4em 1em 2em 1em;
+}
+.languages {
+  font-weight: 400;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: .8em;
+}
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .top {
   margin: .8em;
@@ -203,7 +228,7 @@ h5 {
 }
 .about-right {
   position: fixed;
-  right: .1%;
+  right: -24%;
   transform-origin: 0 0;
   transform: rotate(90deg) translate(-50%);
   top: 48%;
@@ -217,7 +242,7 @@ h5 {
 }
 .left {
   position: fixed;
-  left: 2.5em;
+  left: 1.5em;
   transform-origin: 0 0;
   transform: rotate(90deg) translate(-50%);
   top: 48%;
@@ -230,19 +255,24 @@ h5 {
   top: 47%;
   z-index: 3;
 }
+.center-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .corner {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 1em;
+  font-size: .5em;
   position: absolute;
-  top: 33%;
-  left: 71%;
+  top: 40%;
+  left: 74%;
   transform: translate(-50%, -50%);
 }
 .media-icons {
   position: fixed;
-  right: .5em;
-  top: 48%;
+  right: -1em;
+  top: 42%;
   transform: translate(-50%);
   display: flex;
   flex-direction: column;
@@ -251,52 +281,55 @@ h5 {
   position: absolute;
   bottom: 2em;
 }
+.space {
+  margin: 2em auto 2em auto;
+}
 img {
   margin-top: .5em;
   margin-right: .5em;
   margin-bottom: .5em;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (min-width: 768px) {
   .hero-text {
-    font-size: 4em;
+    font-size: 8em;
   }
   .left {
-    left: 1.5em;
+    left: 2.5em;
   }
   .corner {
-    font-size: .5em;
-    left: 74%;
-    top: 35%;
+    font-size: 1em;
+    left: 65%;
+    top: 37%;
   }
   .media-icons {
-    top: 42%;
-    right: -1em;
+    top: 48%;
+    right: .5em;
   }
   .project-p {
-    font-size: 8px;
+    font-size: 1em
   }
   .about-p {
-    font-size: .7em;
+    font-size: 1em;
   }
   .about-right {
-    right: -12%;
+    right: .1%;
   }
   .about-container {
-    padding-left: 2em;
+    padding-left: 4em;
   }
   .contact-container {
-    width: 90%;
+    width: 55%;
   }
   input[type=text], input[type=email], textarea.form-control {
-    width: 90%;
+    width: 60%;
   }
   .contact-title {
-    font-size: 1em;
+    font-size: 2em;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 426px) {
   .hero-text {
     font-size: 5em;
   }
@@ -316,7 +349,7 @@ img {
     width: 80%;
   }
   .about-right {
-    right: -8%;
+    right: -10%;
   }
   .about-p {
     width: 100%;
@@ -329,5 +362,8 @@ img {
   }
   .contact-title {
     font-size: 1.4em;
+  }
+  .languages {
+    font-size: 1em;
   }
 }
