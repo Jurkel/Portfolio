@@ -234,8 +234,8 @@ h5 {
   transform: translate(-50%);
 }
 .about-right {
-  position: fixed;
-  right: -24%;
+  position: absolute;
+  right: -30%;
   transform-origin: 0 0;
   transform: rotate(90deg) translate(-50%);
   top: 48%;
@@ -285,8 +285,8 @@ h5 {
   flex-direction: column;
 }
 .about-icons {
-  position: absolute;
-  bottom: 2em;
+  position: relative;
+  margin-top: 2em;
 }
 .space {
   margin: 2em auto 2em auto;
@@ -297,7 +297,7 @@ img {
   margin-bottom: 0.5em;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .hero-text {
     font-size: 8em;
   }
@@ -320,7 +320,7 @@ img {
     font-size: 1em;
   }
   .about-right {
-    right: 0.1%;
+    right: -25%;
   }
   .about-container {
     padding-left: 4em;
@@ -338,7 +338,7 @@ img {
   }
 }
 
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 424px) {
   .hero-text {
     font-size: 5em;
   }
@@ -358,7 +358,7 @@ img {
     width: 80%;
   }
   .about-right {
-    right: -10%;
+    right: -25%;
   }
   .about-p {
     width: 100%;
